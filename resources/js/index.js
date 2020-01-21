@@ -1,14 +1,18 @@
+$(document).ready(function(){
 function updateTextArea() {
-    var text = "";
-    $('input[type=checkbox]:checked').each( function() {
-        text += $(this).val() + " ";
+  var allVals = [];
+   $('.taglist :checked').each(function(i) {
+       allVals.push($(this).val());
+     });
+   $('#addReason').on('click', function() {
+       var reason = $("#reason").val();
+       allVals.push(reason);
+       $('#finalnote').val(allVals);
+   })
+     $('#finalnote').val(allVals).attr(allVals.length);
+     updateTextArea();
+   }
+   $(function() {
+      $('.taglist input').click(updateTextArea);
     });
-    $('input[type=text]').each( function() {
-        text += $(this).val() + " ";
-    });
-    $('#myTextArea1').val( text );
-}
-
-$('input[type=checkbox]').change(function () {
-    updateTextArea();
 });
