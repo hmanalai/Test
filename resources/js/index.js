@@ -1,19 +1,21 @@
 $(document).ready(function(){
-function updateTextArea() {
-  var allVals = [];
-   $('.taglist :checked').each(function(i) {
-       allVals.push($(this).val());
-       var reason = $("#reason").val();
-     });
-   // $('#addReason').on('click', function() {
-   //     var reason = $("#reason").val();
-   //     allVals.push(reason);
-   //     $('#finalnote').val(allVals);
-   // })
-   $('#finalnote').val(allVals);
-     updateTextArea();
-   }
-   $(function() {
-      $('.taglist input').click(updateTextArea);
-    });
-});
+  var list = [];
+  $("input[type='checkbox']").change(function(){
+    if(this.checked){
+       list.push($(this).val());
+    }
+    else{
+      if ((index = list.indexOf($(this).val())) !== -1) {
+           list.splice(index, 1);
+      }
+    }
+  })
+
+$('.write').change(function(){
+  list.push($(this).val());
+})
+
+$("#add_button").click(function(){
+    $('#myTextArea').html(list);
+   })
+})

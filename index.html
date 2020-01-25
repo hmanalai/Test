@@ -1,35 +1,36 @@
 <html>
   <head>
-    <title>leter editor</title>
+    <title>letter editor</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="resources/js/index.js"></script>
+    <script src="resources/js/index.js" type="text/javascript" ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="resources/css/index.css"/>
   </head>
   <body>
-    <p>
-      <textarea name="finalnote" id="finalnote" value=""> </textarea>
-    </p>
-    <div class="taglist">
-    <BR>============================<BR>
-      <input type="checkbox" value=" Dear Mr. ">  Mr </input>
-      <input type="checkbox" value=" Dear Ms. ">  Ms. </input>
-      <input type="checkbox" value=" Dear Mrs. "> Mrs </input>
-      <input type="checkbox" value="">  next p </input>
-      <input type="checkbox" value=" I am writing to you to let you know that ">  reason</input>
-      <!-- <input type="checkbox" value="">(i need to type something in the textarea)</input> -->
-      <input type="checkbox" value=" We appreciate your interest in our program "> app you</input>
-      <input type="checkbox" value="">  next p
-      <input type="checkbox" value=" Please feel free to contact us in the future. ">  contact us</input>
-      <!-- <input type="checkbox"> (i need to type something in the textarea)</input> -->
-      <BR>
-      <BR>============================<BR>
-      <input type="checkbox" value=" We are glad to inform you that ">  glad to</input>
-      <!-- <input type="checkbox">(i need to type something in the textarea)</input> -->
-    </div>
-    <div class="typed">
-
-
-    </div>
-
-
-    </body>
+    <form>
+      <textarea id="myTextArea" name="update" cols="85" rows="22"></textarea>
+      <div class="testing">
+        <input class="test" type="checkbox" value=" Dear Mr. ">Mr</input>
+        <input class="test" type="checkbox" value=" Dear Ms. ">Ms.</input>
+        <input class="test" type="checkbox" value=" Dear Mrs. ">Mrs</input>
+      </div>
+      <div>
+        <input class="test" type="checkbox" value=" I am writing to you to let you know that ">Reason</input>
+        <input type="text" value="" class="write"></input>
+      </div>
+      <div>
+        <input class="test" type="checkbox" value=" We appreciate your interest in our program ">Appreciate</input>
+        <input type="text" value="" class="write"></input>
+      </div>
+      <div>
+        <input class="test" type="checkbox" value=" Please feel free to contact us in the future. ">Contact us</input>
+        <input type="text" value="" class="write"></input>
+      </div>
+      <div>
+        <input class="test" type="checkbox" value=" We are glad to inform you that ">Glad to</input>
+        <input type="text" value="" class="write"></input>
+      </div>
+      <button type="button" name="button" id="add_button">Add</button>
+    </form>
+  </body>
 </HTML>
